@@ -16,3 +16,7 @@ Route::get("/help", "StaticController@help")->name('help');
 Route::get("/about", "StaticController@about")->name('about');
 Route::get("/signup", "UserController@create")->name('signup');
 Route::resource('users', 'Usercontroller');
+
+Route::get("/login", "SessionsController@create")->name('sessions.create');
+Route::post("/login", "SessionsController@store")->name('sessions.store');//括号里的一样就可以取名login
+Route::delete("logout", "SessionsController@logout")->name('sessions.logout');

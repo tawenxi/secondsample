@@ -14,6 +14,7 @@
 	{!! Form::open(['method' => 'POST', 'route' => 'users.store']) !!}
 	{{ csrf_field() }}
 
+
 	    <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
 	        {!! Form::label('name', '姓名') !!}
 	        {!! Form::text('name', null, ['class' => 'form-control', 'required' => 'required']) !!}
@@ -35,6 +36,7 @@
 	        {!! Form::password('password_comfirmation', ['class' => 'form-control', 'required' => 'required']) !!}
 	        <small class="text-danger">{{ $errors->first('password_comfirmation') }}</small>
 	    </div>
+	    
 
 	    <div class="btn-group btn-block">
 	        {!! Form::reset("Reset", ['class' => 'btn btn-warning']) !!}
